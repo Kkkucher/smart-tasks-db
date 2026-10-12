@@ -1,0 +1,23 @@
+[project]
+name = "smart-tasks-db"
+version = "0.1.0"
+description = "smart database for ai-hometask generation"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "kkkucher", email = "208812365+Kkkucher@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "pgvector>=0.5.1",
+    "psycopg[binary]>=3.3.6",
+]
+
+[project.scripts]
+smart-tasks-db = "smart_tasks_db:main"
+
+[build-system]
+requires = ["uv_build>=0.12.13,<0.13.0"]
+build-backend = "uv_build"
